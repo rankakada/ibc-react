@@ -1,0 +1,107 @@
+@import './home.css';
+
+body {
+    height: 100vh;
+}
+.main {
+    width: 100%;
+    padding: 1.5rem;
+}
+
+.main .languages-wrapper {
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    top: 95px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    background-color: var(--color-brightgray);
+    padding: 0 11rem;
+    border: 1px solid var(--color-gray);
+    border-radius: 0 0 12px 12px;
+}
+
+.main .languages-wrapper .changeLanguage {
+    cursor: pointer;
+}
+
+.main .option-view-wrapper {
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.main .option-view-wrapper .option-view {
+    background-color: var(--color-blue);
+    border-radius: 50%;
+}
+.main .option-view-wrapper .option-view img{
+    width: 100%;
+    object-fit: contain;
+}
+
+.main .option-download-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1rem;
+}
+
+.main .option-download-wrapper .option-download {
+    height: 100px;
+    flex: 1 1 50%;
+    cursor: pointer;
+}
+
+.main .option-download-wrapper .option-download img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.main .game-icon-wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.main .game-icon-wrapper .game-icon {
+    height: 70px;
+}
+
+.main .game-icon-wrapper .game-icon img {
+    height: 100%;
+    object-fit: contain;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.footer .hotline,
+.footer .privacy-text {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.footer table {
+    margin: 1.5rem auto;
+}
+
+.footer table tbody tr td {
+    border-right: 1px solid var(--color-lightblue);
+    padding: 0 1rem;
+    cursor: pointer;
+    color: var(--color-lightblue);
+}
+.footer table tbody tr td:last-child {
+    border: none;
+}

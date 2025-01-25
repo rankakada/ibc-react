@@ -1,0 +1,23 @@
+@import './global.css';
+
+body {
+    max-width: 575px;
+    margin: 0 auto;
+}
+
+.header {
+    background: url("../assets/images/bg.jpg") no-repeat center;
+    background-size: cover;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .logo {
+    height: 80px;
+}
+
+.header .logo img{
+    height: 100%;
+}
