@@ -1,0 +1,126 @@
+@import './mobileHeader.css';
+body {
+    height: auto;
+}
+
+.form {
+    margin: 1rem auto;
+    width: 80%;
+    color: var(--color-lightblue);
+    line-height: 1.5;
+}
+
+.form .input-control {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+}
+
+.form .input-control label {
+    margin-top: 1rem;
+    margin-left: 5px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.form .input-control input,
+.form .input-control select {
+    padding: 12px 0;
+    padding-left: 3.5rem;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    border: 2px solid var(--color-blue);
+    background-color: var(--color-light);
+    color: var(--color-blue);
+}
+
+.form .input-control input::placeholder {
+    color: var(--color-gray);
+    font-size: 18px;
+    font-weight: 600;
+    font-family: var(--font-family);
+}
+
+.form .input-control .icon{
+    position: absolute;
+    font-size: 48px;
+    color: var(--color-white);
+    background-color: var(--color-blue);
+    left: 0;
+    top: 60px;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+.checkbox-wrapper {
+    margin: 1rem 0;
+}
+
+.form .checkbox-wrapper .checkbox-control input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+}
+
+.form .input-control .code-control {
+    display: flex;
+    width: 100%;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.form .input-control .code-control .code {
+    width: 60%;
+}
+
+.form .input-control .code-control .code-random {
+    width: 40%;
+}
+
+.form .input-control input::-webkit-outer-spin-button,
+.form .input-control input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.form .btn {
+    width: 100%;
+    border-radius: 50px;
+    padding: 12px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border: 2px solid var(--color-blue);
+    background-color: var(--color-lightblue);
+    color: var(--color-white);
+    font-family: var(--font-family);
+    line-height: 1.5;
+    margin-top: 1rem;
+}
+
+table {
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+
+table tbody tr td {
+    border-right: 1px solid var(--color-lightblue);
+    padding: 0 1rem;
+    cursor: pointer;
+    color: var(--color-lightblue);
+}
+table tbody tr td:last-child {
+    border: none;
+}
+
+.footer-link {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+    padding-bottom: 1rem;
+}
+
+.footer-link a{
+    text-decoration: none;
+    color: var(--color-lightblue);
+}

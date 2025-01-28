@@ -2,6 +2,7 @@ import '../styles/home.css';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import MobileHeader from '../components/mobileHeader';
+import { useTranslation } from 'react-i18next';
 
 import kh from '../assets/icons/kh.svg';
 import en from '../assets/icons/en.svg';
@@ -22,16 +23,22 @@ import askap from '../assets/icons/askap.png';
 import logo from '../assets/icons/logo.png';
 
 const HomePage = () => {
+    const { t, i18n } = useTranslation();
+
+    const changeLanguage = (lng) => {
+        i18n.changeLanguage(lng);
+    };
+
   return (
     <div>
         <MobileHeader/>
         <main className='main'>
             <div className='languages-wrapper'>
-                <img src={en} alt="khmer" className='changeLanguage'/>
-                <img src={kh} alt="english" className='changeLanguage'/>
-                <img src={th} alt="thai" className='changeLanguage'/>
-                <img src={ch} alt="chinese" className='changeLanguage'/>
-                <img src={vn} alt="vietnam" className='changeLanguage'/>
+                <img src={en} alt="english" className='changeLanguage' onClick={() => changeLanguage('en')}/>
+                <img src={kh} alt="khmer" className='changeLanguage' onClick={() => changeLanguage('kh')}/>
+                <img src={th} alt="thai" className='changeLanguage' onClick={() => changeLanguage('th')}/>
+                <img src={ch} alt="chinese" className='changeLanguage' onClick={() => changeLanguage('ch')}/>
+                <img src={vn} alt="vietnam" className='changeLanguage' onClick={() => changeLanguage('vn')}/>
             </div>
             <div className='option-view-wrapper'>
                 <Link to="/login" className='option-view' id='desktop-view'>
@@ -61,15 +68,15 @@ const HomePage = () => {
             </div>
             <div className="footer">
                 <h3 className="hotline">Hotline: 096 789 789</h3>
-                <h3 className="privacy-text">©ibc2888.com All rights reserved.</h3>
+                <h3 className="privacy-text">{t('privacy')}</h3>
                 <table>
                     <tbody>
                         <tr className="language-wrapper">
-                            <td className="changeLanguage">English</td>
-                            <td className="changeLanguage">ខ្មែរ</td>
-                            <td className="changeLanguage">ไทย</td>
-                            <td className="changeLanguage">中文</td>
-                            <td className="changeLanguage">Tiếng Việt</td>
+                            <td className="changeLanguage" onClick={() => changeLanguage('en')}>English</td>
+                            <td className="changeLanguage" onClick={() => changeLanguage('kh')}>ខ្មែរ</td>
+                            <td className="changeLanguage" onClick={() => changeLanguage('th')}>ไทย</td>
+                            <td className="changeLanguage" onClick={() => changeLanguage('ch')}>中文</td>
+                            <td className="changeLanguage" onClick={() => changeLanguage('vn')}>Tiếng Việt</td>
                         </tr>
                     </tbody>    
                 </table>
